@@ -1,12 +1,7 @@
-let nomeCliente = document.getElementById("nomeCliente");
-let btnCadastrar = document.querySelector("#btnCadastrar");
+let TextoquevaiMudar = document.getElementById("memsagemnova");
+let btnMudar = document.querySelector("#btnMudar");
 
 
-btnCadastrar.addEventListener("click", ()=>{
-        nomeCliente=nomeCliente.value 
-
-            if(nomeCliente){
-                mensagem.innerText = `Olá ${nomeCliente}!`
-            }
-
+btnMudar.addEventListener("click", ()=>{
+        memsagemnova.innerText = 'TCHARAM!💥'
     });
