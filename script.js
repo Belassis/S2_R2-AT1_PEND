@@ -1,4 +1,4 @@
-let TextoquevaiMudar = document.getElementById("memsagemnova");
+let mensagemnova = document.getElementById("mensagemnova");
 let btnMudar = document.querySelector("#btnMudar");
 
 
