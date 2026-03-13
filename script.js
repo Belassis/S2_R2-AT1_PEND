@@ -5,16 +5,26 @@ let listaTarefas = document.getElementById("listaTarefas");
 
 btnAdicionar.addEventListener("click", () => {
 
-    if (inputTarefa.value.trim() === "") {
-        mensagem.innerText = 'A lista está vazia!';
+    if (inputTarefa.value== "") {
+
+        mensagem.innerText = 'A tarefa está vazia!';
         mensagem.className = 'text-danger fw-bold';
+
     } else {
 
-        let novoItem = document.createElement("li");
-        novoItem.innerText = inputTarefa.value;
-        novoItem.className = "list-group-item";
+        let novaTarefa = document.createElement("li");
+        novaTarefa.className = "list-group-item";
+        novaTarefa.innerText = inputTarefa.value;
 
-        listaTarefas.appendChild(novoItem);
+        let btnRemover = document.createElement("button");
+        btnRemover.innerText = "Remover";
+        btnRemover.className = "btn btn-danger btn-sm";
+
+        btnRemover.addEventListener("click", () => {
+            novaTarefa.remove();
+        });
+        novaTarefa.appendChild(btnRemover);
+        listaTarefas.appendChild(novaTarefa);
 
         mensagem.innerText = 'Item adicionado com sucesso!';
         mensagem.className = 'text-success fw-bold';
