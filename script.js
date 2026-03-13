@@ -5,9 +5,8 @@ let listaTarefas = document.getElementById("listaTarefas");
 
 btnAdicionar.addEventListener("click", () => {
 
-    if (inputTarefa.value.trim() === "") {
-        mensagem.innerText = 'A lista está vazia!';
-        mensagem.className = 'text-danger fw-bold';
+    if (inputTarefa.value == "") {
+        mensagem.innerHTML = '<button type="button" class="btn btn-outline-danger">A lista está vazia!</button>';
     } else {
 
         let novoItem = document.createElement("li");
@@ -16,8 +15,7 @@ btnAdicionar.addEventListener("click", () => {
 
         listaTarefas.appendChild(novoItem);
 
-        mensagem.innerText = 'Item adicionado com sucesso!';
-        mensagem.className = 'text-success fw-bold';
+        mensagem.innerHTML = '<button type="button" class="btn btn-outline-success">Item adicionado com sucesso</button>';
 
         inputTarefa.value = "";
     }
