@@ -5,10 +5,9 @@ let listaTarefas = document.getElementById("listaTarefas");
 
 btnAdicionar.addEventListener("click", () => {
 
-    if (inputTarefa.value== "") {
+    if (inputTarefa.value == "") {
 
-        mensagem.innerText = 'A tarefa está vazia!';
-        mensagem.className = 'text-danger fw-bold';
+         mensagem.innerHTML = '<button type="button" class="btn btn-outline-danger">A lista está vazia!</button>';
 
     } else {
 
@@ -26,8 +25,7 @@ btnAdicionar.addEventListener("click", () => {
         novaTarefa.appendChild(btnRemover);
         listaTarefas.appendChild(novaTarefa);
 
-        mensagem.innerText = 'Item adicionado com sucesso!';
-        mensagem.className = 'text-success fw-bold';
+              mensagem.innerHTML = '<button type="button" class="btn btn-outline-success">Item adicionado com sucesso</button>';
 
         inputTarefa.value = "";
     }
